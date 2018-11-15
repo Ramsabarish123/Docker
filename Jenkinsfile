@@ -1,13 +1,11 @@
 pipeline{
 	agent{
-		docker{
-			image 'alpine'
-		}
+		dockerfile true
 	}
 	stages{
 		stage('step1'){
 			steps{
-				sh 'ls'
+				
 			}
 		}
 	}
