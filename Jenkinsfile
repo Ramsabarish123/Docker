@@ -7,7 +7,7 @@ pipeline{
 	stages{
 		stage('step1'){
 			steps{
-				bat 'dir'
+				sh 'ls'
 			}
 		}
 	}
