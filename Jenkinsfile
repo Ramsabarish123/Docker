@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('step1'){
 			steps{
-				bat "echo hi"
+				docker.inside{ "echo hi"}
 			}
 		}
 	}
