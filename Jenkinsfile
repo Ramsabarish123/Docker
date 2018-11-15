@@ -1,11 +1,10 @@
-pipeline{
-	agent any
-	stages{
-		stage('step1'){
-			steps{
-				docker.image('busybox').inside{sh 'echo hi'}
-			}
-		}
-	}
+pipeline {
+    agent { docker 'maven:3-alpine' } 
+    stages {
+        stage('Example Build') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
+    }
 }
-
