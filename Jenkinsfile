@@ -1,11 +1,13 @@
 pipeline{
 	agent{
-		dockerfile true
+		docker {
+			immage 'busybox'
+		}
 	}
 	stages{
 		stage('step1'){
 			steps{
-				
+				echo "hi"
 			}
 		}
 	}
