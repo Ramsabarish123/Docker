@@ -1,9 +1,9 @@
 pipeline{
-	agent{ docker 'busybox' }
+	agent any
 	stages{
 		stage('step1'){
 			steps{
-				docker.inside{ "echo hi"}
+				docker.image('busybox').inside{sh 'echo hi'}
 			}
 		}
 	}
