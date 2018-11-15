@@ -5,14 +5,14 @@ pipeline {
             agent { docker 'maven:3-alpine' } 
             steps {
                 
-                sh 'mvn --version'
+                bat 'mvn --version'
             }
         }
         stage('Example Test') {
             agent { docker 'openjdk:8-jre' } 
             steps {
                 
-                sh 'java -version'
+                bat 'java -version'
             }
         }
     }
